@@ -18,11 +18,13 @@ jobs:
       with:
         dotnet-version: 5.0.x
         
-    - name: List directory
-      run: ls -la
-    # - name: Restore dependencies
-    #   run: dotnet restore
-    # - name: Build
-    #   run: dotnet build --no-restore
+    - name: Go to project directory
+      run: |
+           cd ./Blog
+           dotnet restore
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
     # - name: Test
     #   run: dotnet test --no-build --verbosity normal
