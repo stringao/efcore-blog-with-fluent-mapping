@@ -19,9 +19,7 @@ jobs:
         dotnet-version: 5.0.x
         
     - name: Go to project directory
-      run: |
-           cd ./Blog
-           dotnet restore
+      run: cd ./Blog
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
